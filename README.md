@@ -1,2 +1,2 @@
 # music-search
-UI web para buscar música en iTunes
+Web app for searching music in iTunes.
