@@ -1,11 +1,21 @@
-import { bindable } from 'aurelia-framework';
+import { inject, bindable } from 'aurelia-framework';
+import { ItunesService } from '../services/itunes-service';
 
+@inject(ItunesService)
 export class Home {
 
   @bindable() filterText = '';
 
+  constructor(service) {
+    this.service = service;
+  }
+
   filterTextChanged(oldValue, newValue) {
-    console.log(this.filterText);
+    this.service
+      .getSongsByText(this.filterText)
+      .then((result) => {
+        console.log(result);
+      })
   }
 
 }
