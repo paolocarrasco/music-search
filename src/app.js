@@ -4,7 +4,7 @@ export class App {
   configureRouter(config, router) {
     config.title = 'Music Search';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: PLATFORM.moduleName('./welcome'),      nav: true, title: 'Welcome' }
+      { route: ['', 'home'], name: 'home',      moduleId: PLATFORM.moduleName('./home/home'),      nav: true, title: 'Home' }
     ]);
 
     this.router = router;
