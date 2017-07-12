@@ -66,9 +66,10 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         use: cssRules,
       },
       { test: /\.html$/i, loader: 'html-loader' },
-      { test: /\.js$/i, loader: 'babel-loader', exclude: nodeModulesDir,
-        options: coverage ? { sourceMap: 'inline', plugins: [ 'istanbul' ] } : {},
-      },
+      //{ test: /\.js$/i, loader: 'babel-loader', exclude: nodeModulesDir,
+      //  options: coverage ? { sourceMap: 'inline', plugins: [ 'istanbul', 'transform-decorators-legacy' ] } : {},
+      //},
+      { test: /\.js$/i, exclude: nodeModulesDir, use: { loader: 'babel-loader', options: { plugins: ['istanbul'], sourceMap: 'inline' } } },
       { test: /\.json$/i, loader: 'json-loader' },
       // use Bluebird as the global Promise implementation:
       { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
