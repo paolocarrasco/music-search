@@ -2,7 +2,7 @@
   <require from="../search-bar/search-bar"></require>
   <div class="container">
     <md-card>
-      <search-bar filter-text.two-way="filterText"></search-bar>
+      <search-bar filter-text.two-way="filterText & debounce:300"></search-bar>
     </md-card>
   </div>
 </template>

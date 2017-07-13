@@ -15,5 +15,4 @@ export class SearchBar {
     clearTimeout(this.timeoutHandle);
     this.timeoutHandle = setTimeout(() => this.executeSearch(), 400);
   }
-
 }
