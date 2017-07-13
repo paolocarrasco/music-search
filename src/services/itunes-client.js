@@ -4,12 +4,12 @@ import { ItunesHttpHandler } from './itunes-http-handler';
 @inject(ItunesHttpHandler)
 export class ItunesClient {
 
-  constructor(http) {
-    this.http = http;
+  constructor(httpHandler) {
+    this.httpHandler = httpHandler;
   }
 
   getSongs(text) {
-    return this.http.fetch(`search?term=${text}`);
+    return this.httpHandler.fetch(`search?term=${text}`);
   }
 
 }
