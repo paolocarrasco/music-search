@@ -1,4 +1,4 @@
-import {App} from 'app';
+import { App } from 'app';
 
 class RouterStub {
   routes;
@@ -27,10 +27,16 @@ describe('the App module', () => {
   });
 
   it('configures the router title', () => {
-    expect(sut.router.title).toEqual('Aurelia');
+    expect(sut.router.title).toEqual('Music Search');
   });
 
   it('should have a welcome route', () => {
-    expect(sut.router.routes).toContainEqual({ route: ['', 'welcome'], name: 'welcome',  moduleId: './welcome', nav: true, title: 'Welcome' });
+    expect(sut.router.routes).toContainEqual({
+      route: ['', 'home'],
+      name: 'home',
+      moduleId: './home/home',
+      nav: true,
+      title: 'Home'
+    });
   });
 });
