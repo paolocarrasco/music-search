@@ -2,7 +2,7 @@ import { inject, bindable } from 'aurelia-framework';
 import { ItunesService } from '../services/itunes-service';
 
 @inject(ItunesService)
-export class Home {
+export class HomeIndex {
 
   @bindable() filterText = '';
 

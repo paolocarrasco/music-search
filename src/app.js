@@ -6,7 +6,7 @@ export class App {
     config.map([
       {
         route: ['', 'home'], name: 'home',
-        moduleId: PLATFORM.moduleName('./home/home'),
+        moduleId: PLATFORM.moduleName('home/index', 'home'),
         nav: true, title: 'Home'
       }
     ]);
