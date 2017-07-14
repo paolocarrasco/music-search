@@ -14,5 +14,10 @@ export class ItunesClient {
     return this.httpHandler.fetch(searchQuery);
   }
 
+  getSongsByArtist(id) {
+    const searchQuery = `lookup?id=${id}&entity=song`;
+    return this.httpHandler.fetch(searchQuery);
+  }
+
 }
 

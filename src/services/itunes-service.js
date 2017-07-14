@@ -16,5 +16,13 @@ export class ItunesService {
             .then(json => json.results )
   }
 
+  getSongsByArtist(id) {
+    return this.itunesClient
+            .getSongsByArtist(id)
+            .then(response => response.json())
+            .then(json => json.results )
+            .then(json => json.filter(x => x.kind == 'song') )
+  }
+
 }
 
