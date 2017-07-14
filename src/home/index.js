@@ -14,7 +14,7 @@ export class HomeIndex {
     this.service
       .getSongsByText(this.filterText)
       .then((result) => {
-        console.log(result);
+        this.result = result;
       })
   }
 

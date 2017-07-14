@@ -1,0 +1,15 @@
+<template bindable="item">
+  <md-card md-horizontal="true"
+    md-image="${item.artworkUrl100}" md-title="${item.collectionName}">
+    <dl>
+      <dt>Artist name</dt>
+      <dd>${item.artistName}</dd>
+      <dt>Primary genre</dt>
+      <dd>${item.primaryGenreName}</dd>
+      <dt>Type</dt>
+      <dd>${item.kind}</dd>
+      <dt>Track name</dt>
+      <dd>${item.trackName}</dd>
+    </dl>
+  </md-card>
+</template>
