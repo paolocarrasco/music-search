@@ -1,13 +1,15 @@
-import {PLATFORM} from 'aurelia-pal';
+import { PLATFORM } from 'aurelia-pal';
 
 export class App {
   configureRouter(config, router) {
     config.title = 'Music Search';
     config.map([
       {
-        route: ['', 'home'], name: 'home',
+        route: ['', 'home'],
+        name: 'home',
         moduleId: PLATFORM.moduleName('home/index', 'home'),
-        nav: true, title: 'Home'
+        nav: true,
+        title: 'Home'
       }
     ]);
 

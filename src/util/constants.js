@@ -1,7 +1,4 @@
-
-const Constants = {
+export default {
   baseUrl: 'https://itunes.apple.com/'
 }
-
-export default Constants;
 

@@ -34,7 +34,7 @@ describe('the App module', () => {
     expect(sut.router.routes).toContainEqual({
       route: ['', 'home'],
       name: 'home',
-      moduleId: './home/home',
+      moduleId: 'home/index',
       nav: true,
       title: 'Home'
     });
