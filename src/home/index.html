@@ -7,8 +7,8 @@
     </md-card>
   </div>
   <div class="container">
-    <div repeat.for="item of result">
-      <result-item item.bind="item"></result-item>
-    </div>
+    <md-collection>
+      <result-item item.bind="item" repeat.for="item of result"></result-item>
+    </md-collection>
   </div>
 </template>
