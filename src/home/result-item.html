@@ -1,9 +1,15 @@
 <template bindable="item">
   <md-collection-item class="avatar">
-    <img src="${item.artworkUrl100}"
-      alt="${item.collectionName"
+    <img src="${item.artworkUrl100 & oneTime}"
+      alt="${item.collectionName & oneTime}"
       class="circle">
-    <span class="title">${item.artistName}</span>
-    <p>${item.trackName} (${item.primaryGenreName})</p>
+    <span class="title">
+      <strong>${item.kind & oneTime}:</strong>
+      ${item.trackName & oneTime}
+      (${item.primaryGenreName & oneTime})
+    </span>
+    <p>
+      ${item.artistName & oneTime}
+    </p>
   </md-collection-item>
 </template>
