@@ -1,5 +1,6 @@
 import { inject } from 'aurelia-framework';
 import { ItunesHttpHandler } from './itunes-http-handler';
+import constants from '../util/constants';
 
 @inject(ItunesHttpHandler)
 export class ItunesClient {
@@ -9,7 +10,8 @@ export class ItunesClient {
   }
 
   getSongs(text) {
-    return this.httpHandler.fetch(`search?term=${text}`);
+    const searchQuery = `search?term=${text}&limit=${constants.paginationLimit}`;
+    return this.httpHandler.fetch(searchQuery);
   }
 
 }

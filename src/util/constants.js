@@ -1,4 +1,5 @@
 export default {
-  baseUrl: 'https://itunes.apple.com/'
+  baseUrl: 'https://itunes.apple.com/',
+  paginationLimit: 25
 }
 

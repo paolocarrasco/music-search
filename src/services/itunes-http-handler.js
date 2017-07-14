@@ -1,5 +1,5 @@
 import { HttpClient } from 'aurelia-fetch-client';
-import Constants from '../util/constants';
+import constants from '../util/constants';
 
 export class ItunesHttpHandler extends HttpClient {
 
@@ -15,7 +15,7 @@ export class ItunesHttpHandler extends HttpClient {
             'X-Requested-With': 'Fetch',
           },
         })
-        .withBaseUrl(Constants.baseUrl));
+        .withBaseUrl(constants.baseUrl));
   }
 
 }
