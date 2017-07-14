@@ -10,6 +10,13 @@ export class App {
         moduleId: PLATFORM.moduleName('home/index', 'home'),
         nav: true,
         title: 'Home'
+      },
+      {
+        route: 'artist',
+        name: 'artist',
+        moduleId: PLATFORM.moduleName('artist/index', 'artist'),
+        nav: false,
+        title: 'Artist'
       }
     ]);
 

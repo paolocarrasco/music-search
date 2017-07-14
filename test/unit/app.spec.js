@@ -39,4 +39,14 @@ describe('the App module', () => {
       title: 'Home'
     });
   });
+
+  it('should have an artist route', () => {
+    expect(sut.router.routes).toContainEqual({
+      route: 'artist',
+      name: 'artist',
+      moduleId: 'artist/index',
+      nav: false,
+      title: 'Artist'
+    });
+  });
 });
