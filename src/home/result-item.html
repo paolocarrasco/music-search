@@ -10,7 +10,9 @@
       (${item.primaryGenreName & oneTime})
     </span>
     <p>
-      ${item.artistName & oneTime}
+      <a route-href="route: artist; params.one-way: { id: item.artistId }">
+        ${item.artistName & oneTime}
+      </a>
     </p>
     <button md-button click.delegate="handleClick()"><i class="left material-icons">play_circle_filled</i>PLAY</button>
   </md-collection-item>
