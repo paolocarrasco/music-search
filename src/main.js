@@ -12,7 +12,7 @@ export async function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .globalResources(PLATFORM.moduleName('resources/elements/result-item'))
+    .globalResources(PLATFORM.moduleName('resources/elements/result-item', 'resources'))
     .plugin(PLATFORM.moduleName('aurelia-materialize-bridge'),
       b => b.useAll());
 
