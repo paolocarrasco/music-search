@@ -7,7 +7,9 @@
   </div>
   <div class="container">
     <md-collection if.bind="result.length">
-      <result-item item.bind="item" repeat.for="item of result"></result-item>
+      <md-collection-item class="avatar" repeat.for="item of result">
+        <result-item item.bind="item"></result-item>
+      </md-collection-item>
     </md-collection>
     <p if.bind="result.length === 0">
       No results were found for your search.

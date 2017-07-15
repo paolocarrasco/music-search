@@ -1,5 +1,4 @@
 <template bindable="item">
-  <md-collection-item class="avatar">
     <img src="${item.artworkUrl30 & oneTime}"
       alt="${item.collectionName & oneTime}"
       title="${item.collectionName & oneTime}"
@@ -14,6 +13,9 @@
         ${item.artistName & oneTime}
       </a>
     </p>
-    <button md-button click.delegate="handleClick()"><i class="left material-icons">play_circle_filled</i>PLAY</button>
-  </md-collection-item>
+    <div class="secondary-content">
+      <button md-button click.delegate="handleClick()">
+        <i class="left material-icons">play_circle_filled</i>
+      </button>
+    </div>
 </template>
