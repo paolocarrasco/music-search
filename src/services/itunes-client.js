@@ -10,7 +10,7 @@ export class ItunesClient {
   }
 
   getSongs(text) {
-    const searchQuery = `search?term=${text}&limit=${constants.paginationLimit}`;
+    const searchQuery = `search?term=${text}&entity=song&limit=${constants.paginationLimit}`;
     return this.httpHandler.fetch(searchQuery);
   }
 
